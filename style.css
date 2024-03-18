@@ -20,7 +20,7 @@
 body {
   color: var(--text);
   background: var(--background);
-  font: 13px var(--font);
+  font: 12px var(--font);
 }
 
 a {
@@ -55,7 +55,7 @@ a:hover {
 /* BLURBS */
 
 .blurb-header {
-  font: 50px var(--header);
+  font: 45px var(--header);
 }
 
 .divider {
