@@ -1,0 +1,205 @@
+:root {
+  --background: #f7f7f7;
+  --text: #111;
+  --accent1: #627254;
+  --accent1O: rgb(98, 114, 84, 0.9);
+  --accent1O1: rgb(98, 114, 84, 0.7);
+  --accent2: #76885B;
+  --accent3: #DDDDDD;
+  --accent4: #EEEEEE;
+  --topImage: center/cover url('https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg') fixed;
+  --font: 'Roboto', sans-serif;
+  --header: 'Antonio', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font: 14px var(--font);
+}
+
+a {
+  color: var(--accent1);
+}
+
+a:hover {
+  color: var(--accent2);
+}
+
+
+
+/* SCROLLBAR */
+/* will not work on all browsers - non-standard */
+
+::-webkit-scrollbar {
+  background: var(--accent3);
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent2);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
+/* BLURBS */
+
+.blurb-header {
+  font: 50px var(--header);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--accent2);
+  margin: 10px 0 20px;
+}
+
+.blurb {
+  text-align: justify;
+  line-height: 20px;
+}
+
+
+
+/* HEADER */
+
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--accent1O);
+  color: var(--accent4);
+  font-size: 16px;
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.logo.small {
+  background: pink;
+}
+
+#header a {
+  color: var(--accent4);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.header-title,
+.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title div,
+.header-links a {
+  display: block;
+  width: fit-content;
+  padding: 4px 20px;
+}
+
+.header-title .name {
+  font: 28px var(--header);
+}
+
+
+
+/* TOP */
+
+#top {
+  background: var(--topImage), var(--accent2);
+  height: 100vh;
+}
+
+#top .top-blurb {
+  width: 60vw;
+  position: absolute;
+  bottom: 0;
+  background: var(--accent1O1);
+  color: var(--accent4);
+  padding: 20px 40px 40px;
+  cursor: default;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+/* TOPIC1 */
+
+#topic1 {
+  background: var(--background);
+  height: 75vh;
+}
+
+
+
+/* TOPIC2 */
+
+#topic2 {
+  background: var(--accent4);
+  height: 75vh;
+}
+
+
+
+/* FOOTER */
+
+#footer {
+  background: var(--accent2);
+  color: var(--background);
+  font-size: 16px;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 60px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer-address {
+  line-height: 20px;
+}
+
+.footer-address span {
+  display: block;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-socials .social {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+  background: pink;
+  border-radius: 25px;
+}
+
