@@ -2,8 +2,8 @@
   --background: #f7f7f7;
   --text: #111;
   --accent1: #627254;
-  --accent1O: rgb(98, 114, 84, 0.9);
-  --accent1O1: rgb(98, 114, 84, 0.7);
+  --accent1O: rgba(98, 114, 84, 0.9);
+  --accent1O1: rgba(98, 114, 84, 0.7);
   --accent2: #76885B;
   --accent3: #DDDDDD;
   --accent4: #EEEEEE;
@@ -20,7 +20,7 @@
 body {
   color: var(--text);
   background: var(--background);
-  font: 14px var(--font);
+  font: 13px var(--font);
 }
 
 a {
@@ -88,7 +88,6 @@ a:hover {
           box-sizing: border-box;
   background: var(--accent1O);
   color: var(--accent4);
-  font-size: 16px;
   z-index: 1000;
   transition: all 0.5s;
 }
@@ -100,7 +99,8 @@ a:hover {
 #header a {
   color: var(--accent4);
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-size: 14px;
 }
 
 .header-title,
@@ -120,6 +120,7 @@ a:hover {
 
 .header-title .name {
   font: 28px var(--header);
+  padding: 0 20px 8px;
 }
 
 
@@ -169,7 +170,6 @@ a:hover {
 #footer {
   background: var(--accent2);
   color: var(--background);
-  font-size: 16px;
   height: 20vh;
   display: flex;
   flex-direction: row;
