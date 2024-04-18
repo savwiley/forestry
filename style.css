@@ -7,7 +7,9 @@
   --accent2: #76885B;
   --accent3: #DDDDDD;
   --accent4: #EEEEEE;
-  --topImage: center/cover url('https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg') fixed;
+
+  --topImage: center/cover url('https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg');
+
   --font: 'Roboto', sans-serif;
   --header: 'Antonio', serif;
 }
@@ -70,6 +72,10 @@ a:hover {
   line-height: 20px;
 }
 
+ul {
+  margin-left: 15px;
+}
+
 
 
 /* HEADER */
@@ -92,15 +98,21 @@ a:hover {
   transition: all 0.5s;
 }
 
-.logo.small {
-  background: var(--background);
-}
-
-#header a {
+#header-page {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--accent1);
   color: var(--accent4);
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-size: 14px;
+  z-index: 1000;
 }
 
 .header-title,
@@ -116,6 +128,36 @@ a:hover {
   display: block;
   width: fit-content;
   padding: 4px 20px;
+}
+
+.header-links a {
+  margin: 4px 20px;
+  padding: 2px 8px;
+  background: linear-gradient(90deg, var(--accent4), var(--accent4)) no-repeat;
+  background-size: 0% 10%;
+  background-position: bottom right;
+  transition: all 0.4s, background-position 0s;
+}
+
+.header-links a:hover {
+  background-size: 100% 10%;
+  background-position: bottom left;
+}
+
+#header a,
+#header-page a {
+  color: var(--accent4);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.logo.small {
+  padding-right: 0;
+}
+
+.logo.small img {
+  height: 60px;
 }
 
 .header-title .name {
@@ -173,9 +215,10 @@ a:hover {
 
 
 
-/* TOPIC1 */
+/* TOPIC1 & 3 */
 
-#topic1 {
+#topic1,
+#topic3 {
   background: var(--background);
   height: 75vh;
 }
