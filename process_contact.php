@@ -60,11 +60,14 @@ if (isset($_POST['Email'])) {
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
-    // create email headers
-    $headers = 'From: ' . $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    // create email headers    
+    $headers = "From: ";
+    $headers .= $email;
+    //$headers = 'From: ' . $email . "\r\n" .
+        //'Reply-To: ' . $email . "\r\n" .
+        //'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
+    header('Location: ../');
 ?>
 
     <!-- INCLUDE YOUR SUCCESS MESSAGE BELOW -->
