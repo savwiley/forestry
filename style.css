@@ -5,8 +5,8 @@
   --accent1O: rgba(98, 114, 84, 0.9);
   --accent1O1: rgba(98, 114, 84, 0.7);
   --accent2: #76885B;
-  --accent3: #DDDDDD;
-  --accent4: #EEEEEE;
+  --accent3: #DDD;
+  --accent4: #EEE;
 
   --topImage: center/cover url('https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg');
 
@@ -230,6 +230,58 @@ ul {
 #topic2 {
   background: var(--accent4);
   height: 75vh;
+}
+
+
+
+/* FORM */
+
+form {
+  width: 50%;
+  margin: auto;
+}
+
+form div {
+  margin: 10px 0;
+}
+
+label {
+  font: 18px var(--header);
+}
+
+input,
+textarea {
+  background: var(--accent3);
+  border: 1px solid var(--accent1);
+  color: var(--text);
+  width: 100%;
+  padding: 2px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  background: var(--accent1);
+  color: var(--accent4);
+}
+
+button {
+  background: var(--accent1);
+  color: var(--accent4);
+  font: 16px var(--header);
+  border: 2px solid var(--accent1);
+  border-radius: 10px;
+  padding: 2px 8px 4px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent2);
 }
 
 
