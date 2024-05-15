@@ -31,30 +31,38 @@
   </div>
 
 
-  <form method="post" action="process_contact.php">
+  <div id="contact">
+    <form method="post" action="process_contact.php">
+      <div class="blurb-header">Contact Me</div>
 
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" name="name" required>
+      <div>
+        <label for="name">Name*:</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div>
+        <label for="email">Email*:</label>
+        <input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+      </div>
+
+      <div>
+        <label for="message">Message*:</label>
+        <textarea placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <div>
+        <button type="submit" value="Submit">Submit</button>
+      </div>
+
+    </form>
+
+    <div class="contact-info">
+      P.O.Box 123<br />
+      Cityville, ST 12345<br /><br />
+      Office Hours: 8AM - 4PM EST
     </div>
 
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
-    </div>
-
-    <div>
-      <label for="message">Message:</label>
-      <textarea placeholder="Type your message here..." required></textarea>
-    </div>
-
-    <div>
-      <button type="submit" value="Submit">Submit</button>
-    </div>
-
-  </form>
-
-
+  </div>
 
 
 
