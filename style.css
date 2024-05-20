@@ -197,6 +197,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 60px;
   cursor: default;
   -webkit-box-sizing: border-box;
@@ -206,6 +207,7 @@ ul {
 
 .topic-blurb {
  width: 60%;
+ font-size: 13px;
 }
 
 .topic-picture {
