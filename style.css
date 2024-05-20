@@ -17,6 +17,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -99,14 +100,10 @@ ul {
 }
 
 #header-page {
-  position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 5px 10px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -160,8 +157,13 @@ ul {
   height: 60px;
 }
 
-.header-title .name {
+#header .header-title .name {
   font: 28px var(--header);
+  padding: 0 20px 8px;
+}
+
+#header-page .header-title .name {
+  font: 18px var(--header);
   padding: 0 20px 8px;
 }
 
@@ -240,7 +242,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 2%;
+  margin: 50px 0;
 }
 
 .contact-info {
@@ -293,10 +295,11 @@ textarea:focus {
 button {
   background: var(--accent1);
   color: var(--accent4);
-  font: 16px var(--header);
+  font: 18px var(--header);
   border: none;
   border-radius: 5px;
-  padding: 4px 14px 6px;
+  padding: 6px 22px 8px;
+  float: right;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -325,25 +328,42 @@ button:hover {
           box-sizing: border-box;
 }
 
+#footer-page {
+  background: var(--accent2);
+  color: var(--background);
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .footer-address {
-  line-height: 20px;
+  line-height: 15px;
+  font-size: 10px;
+  cursor: default;
 }
 
 .footer-address span {
   display: block;
 }
 
-.footer-socials {
+.footer-top {
   display: flex;
   flex-direction: row;
+  font-size: 32px;
+  text-shadow: 0 4px 4px var(--accent1);
 }
 
-.footer-socials .social {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin: 0 20px;
-  background: var(--background);
-  border-radius: 25px;
+.footer-top a {
+  color: var(--accent4);
+  transition: all 0.2s;
 }
 
+.footer-top a:hover {
+  margin-bottom: 10px;
+}
