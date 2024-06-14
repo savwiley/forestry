@@ -8,11 +8,68 @@
   --accent3: #DDD;
   --accent4: #EEE;
 
-  --topImage: center/cover url('https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg');
+  --topImage: center/cover url('./images/MainBackgroundPhoto.png');
+
+  /* https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg */
+
+  --svg: url('./images/SmallLogoBlurb.svg') no-repeat;
 
   --font: 'Roboto', sans-serif;
   --header: 'Antonio', serif;
 }
+
+
+
+/* IMAGES */
+
+.code-of-ethics {
+  background: center/cover url('./images/CodeOfEthics.png'), #fff;
+}
+
+.about-us {
+  background: center/cover url('./images/AboutUsAndOurMission.png'), #fff;
+}
+
+.land-n-timber {
+  background: center/contain url('./images/LandAndTimberManagment.jpg') no-repeat, #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+.fa-magnifying-glass-plus {
+  opacity: 0;
+  margin: 10px;
+  font-size: 28px;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.land-n-timber:hover .fa-magnifying-glass-plus {
+  opacity: 1;
+}
+
+.reforestation {
+  background: center/cover url('./images/SilvicultureAndReforestationPlanning.png'), #fff;
+}
+
+.natural-resource {
+  background: center/cover url('./images/NaturalResourceResearch.jpg'), #fff;
+}
+
+.dement-ranch {
+  background: center/cover url('./images/DementRanchTestimonial.png'), #fff;
+}
+
+.curry-county {
+  background: center/cover url('./images/ClientInCurryTestimonial.png'), #fff;
+}
+
+
+
+/* GENERAL */
 
 * {
   margin: 0;
@@ -23,7 +80,7 @@
 body {
   color: var(--text);
   background: var(--background);
-  font: 12px var(--font);
+  font: 14px var(--font);
 }
 
 a {
@@ -167,6 +224,27 @@ ul {
   padding: 0 20px 8px;
 }
 
+#header .header-title .subtitle,
+#header-page .header-title .subtitle {
+  font-size: 12px;
+}
+
+@media (max-width: 950px) {
+  #header,
+  #header-page {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .header-title {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .header-title div,
+  .header-links a {
+    margin: 4px;
+  }
+}
+
 
 
 /* TOP */
@@ -189,6 +267,18 @@ ul {
           box-sizing: border-box;
 }
 
+@media (max-width: 950px) {
+  #top .top-blurb {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .blurb-header {
+    font-size: 35px;
+  }
+}
+
 
 
 /* BOTH TOPICS */
@@ -207,14 +297,31 @@ ul {
 
 .topic-blurb {
  width: 60%;
- font-size: 13px;
+ font-size: 15px;
 }
 
 .topic-picture {
-  height: 100%;
+  max-height: 70vh;
+  min-height: 50vh;
   width: 30%;
-  background: #fff;
   box-shadow: 2px 2px 4px #333;
+}
+
+@media (max-width: 650px) { 
+  #topic1,
+  #topic3 {
+    flex-direction: column-reverse;
+  }
+  #topic2 {
+    flex-direction: column;
+  }
+  .topic-blurb {
+    width: 90%;
+  }
+  .topic-picture {
+    width: 90%;
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -223,8 +330,8 @@ ul {
 
 #topic1,
 #topic3 {
-  background: var(--background);
-  height: 75vh;
+  background: 70% / 30% var(--svg), var(--background);
+  min-height: 75vh;
 }
 
 
@@ -232,8 +339,66 @@ ul {
 /* TOPIC2 */
 
 #topic2 {
-  background: var(--accent4);
-  height: 75vh;
+  background: 30% / 30% var(--svg),  var(--accent4);
+  min-height: 75vh;
+}
+
+
+
+/* TOPIC BASES */
+
+#topic-bases {
+  background: 50% / 30% var(--svg), var(--background);
+  min-height: 75vh;
+}
+
+#topic-bases .topic-blurb {
+  width: 80%;
+  margin: auto;
+}
+
+#topic-bases .blurb-header {
+  text-align: center;
+}
+
+#topic-bases .blurb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#topic-bases .base-section {
+  margin: 20px;
+}
+
+#topic-bases .image-base {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  margin: 0 auto 20px;
+  box-shadow: 2px 2px 4px #333;
+  transition: all 0.2s;
+}
+
+#topic-bases .image-base:hover {
+  transform: scale(1.1);
+}
+
+#topic-bases .image1 {
+  background: center/cover url('./images/pexels-pixabay-landowners.jpg');
+}
+
+#topic-bases .image2 {
+  background: center/cover url('./images/pexels-souvenirpixels-federal.jpg');
+}
+
+#topic-bases .image3 {
+  background: center/cover url('./images/pexels-lara-jameson-nonprofit.jpg');
+}
+
+#topic-bases .image4 {
+  background: center/cover url('./images/pexels-ozgomz-forester.jpg');
 }
 
 
@@ -245,12 +410,27 @@ ul {
   flex-direction: row;
   align-items: center;
   margin: 50px 0;
+  background:  85% / 30% var(--svg);
 }
 
 .contact-info {
   width: 35%;
   font: 20px var(--header);
   cursor: default;
+}
+
+@media (max-width: 700px) {
+  #contact {
+    flex-direction: column;
+  }
+  form {
+    border-right: none;
+    border-bottom: 2px solid var(--accent2);
+  }
+  .contact-info {
+    padding-top: 50px;
+    width: 80%;
+  }
 }
 
 
@@ -312,6 +492,15 @@ button:hover {
   background: var(--accent2);
 }
 
+@media (max-width: 700px) {
+  form {
+    border-right: none;
+    border-bottom: 2px solid var(--accent2);
+    padding: 0 0 50px 0;
+    width: 90%;
+  }
+}
+
 
 
 /* FOOTER */
@@ -346,7 +535,8 @@ button:hover {
 
 .footer-address {
   line-height: 15px;
-  font-size: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
   cursor: default;
 }
 
@@ -357,7 +547,7 @@ button:hover {
 .footer-top {
   display: flex;
   flex-direction: row;
-  font-size: 32px;
+  font-size: 35px;
   text-shadow: 0 4px 4px var(--accent1);
 }
 
