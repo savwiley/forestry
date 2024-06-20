@@ -285,7 +285,7 @@ ul {
 
 #topic1,
 #topic3 {
-  background: 70% / 30% var(--svg), var(--background);
+  background: 25% / 30% var(--svg), var(--background);
   min-height: 75vh;
 }
 
@@ -294,7 +294,7 @@ ul {
 /* TOPIC2 */
 
 #topic2 {
-  background: 30% / 30% var(--svg),  var(--accent4);
+  background: 75% / 30% var(--svg),  var(--accent4);
   min-height: 75vh;
 }
 
@@ -519,9 +519,11 @@ button:hover {
   #topic1,
   #topic3 {
     flex-direction: column-reverse;
+    background: 50% / 50% var(--svg), var(--background);
   }
   #topic2 {
     flex-direction: column;
+    background: 50% / 50% var(--svg),  var(--accent4);
   }
   .topic-blurb {
     width: 90%;
@@ -548,5 +550,8 @@ button:hover {
   .contact-info {
     padding-top: 50px;
     width: 80%;
+  }
+  .blurb {
+    text-align: center;
   }
 }
