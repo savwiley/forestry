@@ -80,7 +80,7 @@
 body {
   color: var(--text);
   background: var(--background);
-  font: 14px var(--font);
+  font: 16px var(--font);
 }
 
 a {
@@ -229,22 +229,6 @@ ul {
   font-size: 12px;
 }
 
-@media (max-width: 950px) {
-  #header,
-  #header-page {
-    flex-direction: column;
-    padding: 5px;
-  }
-  .header-title {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .header-title div,
-  .header-links a {
-    margin: 4px;
-  }
-}
-
 
 
 /* TOP */
@@ -265,18 +249,6 @@ ul {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-@media (max-width: 950px) {
-  #top .top-blurb {
-    width: 100%;
-  }
-}
-
-@media (max-width: 650px) {
-  .blurb-header {
-    font-size: 35px;
-  }
 }
 
 
@@ -305,23 +277,6 @@ ul {
   min-height: 50vh;
   width: 30%;
   box-shadow: 2px 2px 4px #333;
-}
-
-@media (max-width: 650px) { 
-  #topic1,
-  #topic3 {
-    flex-direction: column-reverse;
-  }
-  #topic2 {
-    flex-direction: column;
-  }
-  .topic-blurb {
-    width: 90%;
-  }
-  .topic-picture {
-    width: 90%;
-    margin-bottom: 20px;
-  }
 }
 
 
@@ -419,20 +374,6 @@ ul {
   cursor: default;
 }
 
-@media (max-width: 700px) {
-  #contact {
-    flex-direction: column;
-  }
-  form {
-    border-right: none;
-    border-bottom: 2px solid var(--accent2);
-  }
-  .contact-info {
-    padding-top: 50px;
-    width: 80%;
-  }
-}
-
 
 
 /* FORM */
@@ -492,15 +433,6 @@ button:hover {
   background: var(--accent2);
 }
 
-@media (max-width: 700px) {
-  form {
-    border-right: none;
-    border-bottom: 2px solid var(--accent2);
-    padding: 0 0 50px 0;
-    width: 90%;
-  }
-}
-
 
 
 /* FOOTER */
@@ -558,4 +490,63 @@ button:hover {
 
 .footer-top a:hover {
   margin-bottom: 10px;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+  #header,
+  #header-page {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .header-title {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .header-title div,
+  .header-links a {
+    margin: 4px;
+  }
+  #top .top-blurb {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) { 
+  #topic1,
+  #topic3 {
+    flex-direction: column-reverse;
+  }
+  #topic2 {
+    flex-direction: column;
+  }
+  .topic-blurb {
+    width: 90%;
+  }
+  .topic-picture {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .blurb-header {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  #contact {
+    flex-direction: column;
+  }
+  form {
+    border-right: none;
+    border-bottom: 2px solid var(--accent2);
+    padding: 0 0 50px 0;
+    width: 90%;
+  }
+  .contact-info {
+    padding-top: 50px;
+    width: 80%;
+  }
 }
