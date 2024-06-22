@@ -176,6 +176,19 @@ ul {
   transition: all 0.5s;
 }
 
+#header-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--accent1);
+  color: var(--accent4);
+  z-index: 1000;
+}
+
 .header-title,
 .header-links {
   display: flex;
@@ -210,7 +223,8 @@ ul {
 }
 
 #header a,
-#header-page a {
+#header-page a,
+#header-contact a {
   color: var(--accent4);
   text-decoration: none;
   letter-spacing: 3px;
@@ -230,13 +244,15 @@ ul {
   padding: 0 20px 8px;
 }
 
-#header-page .header-title .name {
+#header-page .header-title .name,
+#header-contact .header-title .name {
   font: 22px var(--header);
   padding: 0 20px 8px;
 }
 
 #header .header-title .subtitle,
-#header-page .header-title .subtitle {
+#header-page .header-title .subtitle,
+#header-contact .header-title .subtitle {
   font-size: 12px;
 }
 
@@ -514,7 +530,8 @@ button:hover {
 
 @media (max-width: 950px) {
   #header,
-  #header-page {
+  #header-page,
+  #header-contact {
     flex-direction: column;
     padding: 5px;
   }
@@ -522,7 +539,8 @@ button:hover {
     justify-content: center;
     margin-bottom: 20px;
   }
-  #header-page .header-title {
+  #header-page .header-title
+  #header-contact .header-title {
     margin-bottom: 5px;
   }
   .header-title div,
