@@ -38,7 +38,7 @@
 
 
   <div id="contact">
-    <form method="post" id="contact-form">
+    <form method="post" id="contact-form" action="process_contact.php">
       <div class="blurb-header">Contact Me</div>
 
       <div>
@@ -91,24 +91,7 @@
 
 
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function(){
-      emailjs.init({
-        publicKey: "PhaL0T59-7KZ_-tIL",
-      });
-      const form = document.querySelector('#contact-form');
-      emailjs.sendForm('service_apysptk', 'template_4firk74', 'form').then(
-        (response) => {
-          console.log('SUCCESS!', response.status, response.text);
-        },
-        (error) => {
-          console.log('FAILED...', error);
-        },
-      );
-    })();
-  </script>
+
   <script src="https://kit.fontawesome.com/25a49a4783.js" crossorigin="anonymous"></script>
 </body>
 </html>
